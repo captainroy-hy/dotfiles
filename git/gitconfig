@@ -1,0 +1,21 @@
+[user]
+	name = roy wang
+	email = seiwy2010@gmail.com
+[alias]
+    ck = checkout
+    st = status
+    di = diff
+    br = branch
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[icdiff]
+	options = " --line-numbers"
+[credential]
+	helper = osxkeychain
+[clolor "diff"]
+	meta = blue
+[color "diff"]
+	meta = blue

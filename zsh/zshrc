@@ -1,0 +1,295 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/roy/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+setopt HIST_FIND_NO_DUPS
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+        command-time
+        git
+        zsh-completions
+        zsh-autosuggestions
+        zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+export VISUAL=nvim
+export EDITOR=$VISUAL
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias aws_korea="ssh -i "~/.ssh/aws_korea.pem" ec2-user@13.125.237.214"
+# alias aws_korea_likai="ssh -i "~/.ssh/aws_korea_likai.pem" ubuntu@ec2-52-79-38-157.ap-northeast-2.compute.amazonaws.com"
+
+# If command execution time above min. time, plugins will not output time.
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+
+# Message to display (set to "" for disable).
+ZSH_COMMAND_TIME_MSG="Execution time: %s"
+
+# Message color.
+ZSH_COMMAND_TIME_COLOR="green"
+
+# Exclude some commands
+ZSH_COMMAND_TIME_EXCLUDE=(vim mcedit git)
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c6c6c6"
+
+zsh_command_time() {
+    if [ -n "$ZSH_COMMAND_TIME" ]; then
+        if [ "$ZSH_COMMAND_TIME" -le 3 ]; then
+            timer_show="$fg[green]$ZSH_COMMAND_TIME s."
+        elif [ "$ZSH_COMMAND_TIME" -gt 5 ] && [ "$ZSH_COMMAND_TIME" -le 10 ]; then
+            timer_show="$fg[yellow]$ZSH_COMMAND_TIME s."
+        else
+            timer_show="$fg[red]$ZSH_COMMAND_TIME s."
+        fi
+        printf "$fg[${ZSH_COMMAND_TIME_COLOR}]${ZSH_COMMAND_TIME_MSG}\n" "$timer_show"
+    fi
+}
+# zsh_command_time() {
+#     if [ -n "$ZSH_COMMAND_TIME" ]; then
+#         hours=$(($ZSH_COMMAND_TIME/3600))
+#         min=$(($ZSH_COMMAND_TIME/60))
+#         sec=$(($ZSH_COMMAND_TIME%60))
+#         if [ "$ZSH_COMMAND_TIME" -le 3 ]; then
+#             timer_show="$fg[green]$ZSH_COMMAND_TIME s."
+#         elif [ "$ZSH_COMMAND_TIME" -gt 5 ] && [ "$ZSH_COMMAND_TIME" -le 10 ]; then
+#             timer_show="$fg[red] $sec s."
+#         else
+#             if [ "$hours" -gt 0 ]; then
+#                 min=$(($min%60))
+#                 timer_show="$fg[red]$hours h. $min min. $sec s."
+#             else
+#                 timer_show="$fg[red]$min min. $sec s."
+#             fi
+#         fi
+#         printf "$fg[${ZSH_COMMAND_TIME_COLOR}]${ZSH_COMMAND_TIME_MSG}\n" "$timer_show"
+#     fi
+# }
+
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+
+PATH="/Users/roy/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/roy/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/roy/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/roy/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/roy/perl5"; export PERL_MM_OPT;
+
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+#CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+export JAVA_HOME
+export PATH
+export CLASSPATH
+
+export M2_HOME=/Library/Maven
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+export hello_shell_scripts=/home/roy/workspace/hello-shell
+export PATH="$hello_shell_scripts:$PATH"
+export PATH=$PATH:/usr/local/kubebuilder/bin
+
+export GOPATH=/Users/roy/go
+export PATH="$GOPATH/bin:$PATH"
+export GO111MODULE=auto
+
+alias ls='lsd'
+alias la='ls -a'
+alias l='ls -l'
+alias lt='ls --tree'
+alias cat=ccat
+alias vim='/usr/local/bin/nvim'
+
+alias ..='cd ../../'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias cdoam='cd /Users/roy/go/src/github.com/crossplane/oam-kubernetes-runtime'
+alias cdvela='cd /Users/roy/go/src/github.com/oam-dev/kubevela'
+alias cdroy='cd /Users/roy/go/src/roy.hello.me'
+
+alias kl=kubectl
+alias kg='kubectl get'
+alias kgo='kubectl get -o json'
+alias kgy='kubectl get -o yaml'
+alias ka='kubectl apply -f'
+alias kd='kubectl delete'
+alias kt='kubectl tree'
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+alias gst='git status'
+alias gdf='git icdiff'
+alias rgf='rg --files | rg'
+
+alias ctags="`brew --prefix`/bin/ctags"
+eval $(thefuck --alias)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
+
+# autoload -U compinit && compinit //override comp
+# source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+# The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/Users/roy/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/roy/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+# if [ -f '/Users/roy/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/roy/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+function cd () {
+    builtin cd "$1"
+    ls 
+}
+
+alias cp='cp -rv'
+
+[[ -s "/Users/roy/.gvm/scripts/gvm" ]] && source "/Users/roy/.gvm/scripts/gvm"
+
+# Execute "script" command just once
+smart_script(){
+    # if there's no SCRIPT_LOG_FILE exported yet
+    if [ -z "$SCRIPT_LOG_FILE" ]; then
+        # make folder paths
+        logdirparent=~/Terminal_typescripts
+        logdirraw=raw/$(date +%F)
+        logdir=$logdirparent/$logdirraw
+        logfile=$logdir/$(date +%F_%T).$$.rawlog
+
+        # if no folder exist - make one
+        if [ ! -d $logdir ]; then
+            mkdir -p $logdir
+        fi
+
+        export SCRIPT_LOG_FILE=$logfile
+        export SCRIPT_LOG_PARENT_FOLDER=$logdirparent
+
+        # quiet output if no args are passed
+        if [ ! -z "$1" ]; then
+            script -f $logfile
+        else
+            script -f -q $logfile
+        fi
+
+        exit
+    fi
+}
+
+# Start logging into new file
+alias startnewlog='unset SCRIPT_LOG_FILE && smart_script'
+alias ss='smart_script'
+
+# Manually saves current log file: $ savelog logname
+savelog(){
+    # make folder path
+    manualdir=$SCRIPT_LOG_PARENT_FOLDER/manual
+    # if no folder exists - make one
+    if [ ! -d $manualdir ]; then
+        mkdir -p $manualdir
+    fi
+    # make log name
+    logname=${SCRIPT_LOG_FILE##*/}
+    logname=${logname%.*}
+    # add user logname if passed as argument
+    if [ ! -z $1 ]; then
+        logname=$logname'_'$1
+    fi
+    # make filepaths
+    txtfile=$manualdir/$logname'.txt'
+    rawfile=$manualdir/$logname'.rawlog'
+    # make .rawlog readable and save it to .txt file
+    cat $SCRIPT_LOG_FILE | perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | col -b > $txtfile
+    # copy corresponding .rawfile
+    cp $SCRIPT_LOG_FILE $rawfile
+    printf 'Saved logs:\n    '$txtfile'\n    '$rawfile'\n'
+}
