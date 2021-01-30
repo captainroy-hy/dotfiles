@@ -4,6 +4,14 @@
 
 `~/.gitconfig`
 
+#### iterm2
+
+`~/Library/Preferences/com.googlecode.iterm2.plist`
+
+#### k9s
+
+`~/.k9s/*`
+
 #### karabiner 
 
 import into karabiner
