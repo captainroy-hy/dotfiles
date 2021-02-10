@@ -55,6 +55,8 @@ let mapleader=","
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
 " "* 表示系统粘贴板的寄存器
 " 添加此快捷键方便和系统剪贴板交互
 noremap <Leader>p "*p
@@ -84,6 +86,7 @@ Plug 'scrooloose/nerdcommenter'
 
 " Git config
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 "Plug 'bling/vim-bufferline'
 Plug 'MattesGroeger/vim-bookmarks'
@@ -426,6 +429,7 @@ nnoremap <silent><C-n> :cn<CR>
 nnoremap <silent><C-m> :cp<CR>
 nnoremap <silent><C-x> :ccl<CR>
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
