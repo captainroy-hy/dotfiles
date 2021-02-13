@@ -4,18 +4,6 @@ let $VIM_CONFIG_DIR = '~/.config/nvim/configs'
 
 source $VIM_CONFIG_DIR/basic-config.vim
 source $VIM_CONFIG_DIR/basic-keymap.vim
-source $VIM_CONFIG_DIR/plug-airline-sts-bar.vim
-source $VIM_CONFIG_DIR/plug-coc-nvim.vim
-source $VIM_CONFIG_DIR/plug-fugitive.vim
-source $VIM_CONFIG_DIR/plug-fzf.vim
-source $VIM_CONFIG_DIR/plug-markdown-preview.vim
-source $VIM_CONFIG_DIR/plug-nerdcommenter.vim
-source $VIM_CONFIG_DIR/plug-quick-scope.vim
-source $VIM_CONFIG_DIR/plug-tablemode.vim
-source $VIM_CONFIG_DIR/plug-tagbar.vim
-source $VIM_CONFIG_DIR/plug-vim-bookmarks.vim
-source $VIM_CONFIG_DIR/plug-vim-floaterm.vim
-source $VIM_CONFIG_DIR/plug-vim-go.vim
 
 call plug#begin('~/.local/share/nvim/plugged')
 " Plug 'scrooloose/nerdtree'
@@ -96,3 +84,15 @@ colorscheme one " 主题
 " set splitbelow
 " set background=dark
 
+source $VIM_CONFIG_DIR/plug-airline-sts-bar.vim
+source $VIM_CONFIG_DIR/plug-coc-nvim.vim
+source $VIM_CONFIG_DIR/plug-fugitive.vim
+source $VIM_CONFIG_DIR/plug-fzf.vim
+source $VIM_CONFIG_DIR/plug-markdown-preview.vim
+source $VIM_CONFIG_DIR/plug-nerdcommenter.vim
+source $VIM_CONFIG_DIR/plug-quick-scope.vim
+source $VIM_CONFIG_DIR/plug-tablemode.vim
+source $VIM_CONFIG_DIR/plug-tagbar.vim
+source $VIM_CONFIG_DIR/plug-vim-bookmarks.vim
+source $VIM_CONFIG_DIR/plug-vim-floaterm.vim
+source $VIM_CONFIG_DIR/plug-vim-go.vim
