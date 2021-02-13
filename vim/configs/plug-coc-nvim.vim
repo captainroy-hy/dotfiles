@@ -1,5 +1,8 @@
 " coc-nvim
 " 基于 NodeJS 实现，一系列 coc 插件的基础
+
+let g:coc_config_home=$VIM_CONFIG_DIR . '/coc-nvim'
+
 let g:coc_enable_locationlist=1
 " if hidden is not set, TextEdit might fail.
 set hidden

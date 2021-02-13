@@ -9,3 +9,10 @@ highlight notesTitle guifg=OrangeRed1 cterm=bold
 highlight notesListNumber guifg=Orchid1 cterm=bold
 highlight notesRule guifg=White cterm=bold
 highlight notesBold guifg=White cterm=bold
+
+augroup qs_colors
+  autocmd!
+  " autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#5fffff' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#ffff00' gui=underline ctermfg=81 cterm=underline
+augroup END
