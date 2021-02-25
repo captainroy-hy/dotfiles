@@ -41,7 +41,8 @@ set softtabstop=4
 set shiftwidth=4
 " 关闭出错时的蜂鸣声和闪屏
 set noerrorbells visualbell t_vb=
-
+" 总是在最右侧垂直创建新窗口
+set splitright
 
 " 在 YAML 文件中使用 2 个空格代替 tab 缩进
 autocmd FileType yaml setlocal sw=2 ts=2 et ai
