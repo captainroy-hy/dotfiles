@@ -51,6 +51,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'majutsushi/tagbar'
 Plug 'hushicai/tagbar-javascript.vim'
 Plug 'fatih/vim-go'
+Plug 'sebdah/vim-delve'
 " Plug 'ctrlpvim/ctrlp.vim'
 " Markdown Plugins
 Plug 'tpope/vim-markdown'
@@ -96,3 +97,4 @@ source $VIM_CONFIG_DIR/plug-tagbar.vim
 source $VIM_CONFIG_DIR/plug-vim-bookmarks.vim
 source $VIM_CONFIG_DIR/plug-vim-floaterm.vim
 source $VIM_CONFIG_DIR/plug-vim-go.vim
+source $VIM_CONFIG_DIR/plug-vim-delve.vim

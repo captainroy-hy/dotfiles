@@ -36,12 +36,14 @@ let g:go_sameid_search_enabled = 0
 " let g:go_metalinter_autosave_enabled=['golangci-lint']
 
 " vim-go debugger configuration
-nnoremap <leader>ds :GoDebugStart<CR>
-nnoremap <leader>dt :GoDebugTest<CR>
-nnoremap <leader>dc :GoDebugContinue<CR>
-nnoremap <leader>dn :GoDebugNext<CR>
-nnoremap <leader>db :GoDebugBreakpoint<CR>
-nnoremap <leader>dp :GoDebugStep<CR>
+" use vim-delve instead of vim-go as debugger
+" configs refer to 'plug-vim-delve.vim'
+" nnoremap <leader>ds :GoDebugStart<CR>
+" nnoremap <leader>dt :GoDebugTest<CR>
+" nnoremap <leader>dc :GoDebugContinue<CR>
+" nnoremap <leader>dn :GoDebugNext<CR>
+" nnoremap <leader>db :GoDebugBreakpoint<CR>
+" nnoremap <leader>dp :GoDebugStep<CR>
 
 let g:go_debug_windows = {
       \ 'vars':  'rightbelow 60vnew',

@@ -27,6 +27,18 @@ nnoremap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 3/4)<CR>
 " nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 " nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
+" neovim built-in terminal emulator
+tnoremap <Esc> <C-\><C-n>
+" 在 terminal mode 下不同窗口之间(上下左右)切换的快捷键
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
+inoremap <C-h> <C-\><C-N><C-w>h
+inoremap <C-j> <C-\><C-N><C-w>j
+inoremap <C-k> <C-\><C-N><C-w>k
+inoremap <C-l> <C-\><C-N><C-w>l
+
 " tab 标签页切换快捷键
 :nn <Leader>1 1gt
 :nn <Leader>2 2gt
