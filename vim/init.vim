@@ -39,7 +39,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'tag': 'v0.0.80'}
 " Plug 'ycm-core/YouCompleteMe'
 "Plug 'acarapetis/vim-colors-github'
 "Plug 'JamshedVesuna/vim-markdown-preview'

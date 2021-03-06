@@ -45,7 +45,3 @@ let g:go_sameid_search_enabled = 0
 " nnoremap <leader>db :GoDebugBreakpoint<CR>
 " nnoremap <leader>dp :GoDebugStep<CR>
 
-let g:go_debug_windows = {
-      \ 'vars':  'rightbelow 60vnew',
-\ }
-
