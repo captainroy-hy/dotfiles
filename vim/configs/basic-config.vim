@@ -55,3 +55,12 @@ autocmd InsertLeave *.* write
 " 开启文件类型检查，并且载入与该类型对应的缩进规则
 " 开启允许插件识别文件类型
 filetype indent plugin on
+
+set textwidth=80
+set formatoptions+=tc
+
+augroup Markdown
+  autocmd!
+  autocmd FileType markdown set wrap
+  autocmd FileType markdown set textwidth=80
+augroup END
