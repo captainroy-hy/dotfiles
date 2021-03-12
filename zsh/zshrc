@@ -211,6 +211,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 alias gst='git status'
 alias gdf='git icdiff'
 alias rgf='rg --files | rg'
+alias diff='icdiff'
 
 alias ctags="`brew --prefix`/bin/ctags"
 eval $(thefuck --alias)
@@ -304,4 +305,12 @@ savelog(){
     # copy corresponding .rawfile
     cp $SCRIPT_LOG_FILE $rawfile
     printf 'Saved logs:\n    '$txtfile'\n    '$rawfile'\n'
+}
+
+function cdk9s() {
+    clusterName=(`kubectl config current-context`)
+    GREP=(`k9s info | grep Screen`)
+    logPath=`echo ${GREP[3]} | sed -e $'s#\033\[[;0-9]*m##g' | tr -d '[:cntrl:]' | cat`
+
+    cd $logPath/$clusterName
 }
