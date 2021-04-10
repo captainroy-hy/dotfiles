@@ -8,6 +8,7 @@ source $VIM_CONFIG_DIR/basic-keymap.vim
 call plug#begin('~/.local/share/nvim/plugged')
 " Plug 'scrooloose/nerdtree'
 Plug '907th/vim-auto-save'
+Plug 'jjo/vim-cue'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'preservim/nerdtree'
 " Plug 'jistr/vim-nerdtree-tabs'

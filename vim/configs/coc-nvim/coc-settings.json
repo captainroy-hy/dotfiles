@@ -53,6 +53,7 @@
         "enableNerdfont": true
     },
     "explorer.file": {
+        "autoReveal": false,
         "showHiddenFiles": true,
         "column.git.icon.modified": "☘️"
     },

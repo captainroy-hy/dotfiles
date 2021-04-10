@@ -155,3 +155,4 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nmap tt :CocCommand explorer<CR>
 nmap tr :CocCommand explorer $HOME<CR>
 nmap tg :CocCommand explorer $GOPATH/src<CR>
+nnoremap <silent><leader>e :call CocAction('runCommand','explorer','--reveal',expand('%:p'))<cr>

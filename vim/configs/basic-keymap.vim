@@ -7,6 +7,9 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 
+" quick save all
+nnoremap <leader>w :wa<CR>
+
 " 去掉搜索结果的高亮显示
 nnoremap <leader><space> :nohlsearch<CR>
 
