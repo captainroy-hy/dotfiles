@@ -18,6 +18,7 @@
             }
         }
     },
+    "yank.highlight.enable":false,
     "suggest.completionItemKindLabels": {
         "keyword": "\uf1de",
         "variable": "\ue79b",
