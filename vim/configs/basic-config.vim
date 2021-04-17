@@ -64,3 +64,22 @@ augroup Markdown
   autocmd FileType markdown set wrap
   autocmd FileType markdown set textwidth=80
 augroup END
+
+" set integrated terminal color schema to dracula theme
+" issue: https://github.com/neovim/neovim/issues/2897
+let g:terminal_color_0  = '#282a36'
+let g:terminal_color_1  = '#ff5555'
+let g:terminal_color_2  = '#50fa7b'
+let g:terminal_color_3  = '#f1fa8c'
+let g:terminal_color_4  = '#bd93f9'
+let g:terminal_color_5  = '#75507b'
+let g:terminal_color_6  = '#8be9fd'
+let g:terminal_color_7  = '#d3d7cf'
+let g:terminal_color_8  = '#555753'
+let g:terminal_color_9  = '#ef2929'
+let g:terminal_color_10 = '#8ae234'
+let g:terminal_color_11 = '#fce94f'
+let g:terminal_color_12 = '#729fcf'
+let g:terminal_color_13 = '#ad7fa8'
+let g:terminal_color_14 = '#00f5e9'
+let g:terminal_color_15 = '#eeeeec'
