@@ -42,6 +42,9 @@ inoremap <C-j> <C-\><C-N><C-w>j
 inoremap <C-k> <C-\><C-N><C-w>k
 inoremap <C-l> <C-\><C-N><C-w>l
 
+" open terminal in a new tab
+nnoremap <leader>t :tabnew \| terminal<CR>
+
 " tab 标签页切换快捷键
 :nn <Leader>1 1gt
 :nn <Leader>2 2gt
