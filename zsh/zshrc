@@ -2,13 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/roy/.oh-my-zsh"
+export ZSH="/Users/roywang/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
+# ZSH_THEME="spaceship"
+
 
 setopt HIST_FIND_NO_DUPS
 # Set list of themes to pick from when loading at random
@@ -64,8 +66,8 @@ setopt HIST_FIND_NO_DUPS
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-        command-time
         git
+        command-time
         fzf-tab
         zsh-completions
         zsh-autosuggestions
@@ -117,7 +119,7 @@ ZSH_COMMAND_TIME_MSG="Execution time: %s"
 ZSH_COMMAND_TIME_COLOR="green"
 
 # Exclude some commands
-ZSH_COMMAND_TIME_EXCLUDE=(vim mcedit git)
+ZSH_COMMAND_TIME_EXCLUDE=(vim git k9s lnav)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c6c6c6"
 
@@ -133,72 +135,42 @@ zsh_command_time() {
         printf "$fg[${ZSH_COMMAND_TIME_COLOR}]${ZSH_COMMAND_TIME_MSG}\n" "$timer_show"
     fi
 }
-# zsh_command_time() {
-#     if [ -n "$ZSH_COMMAND_TIME" ]; then
-#         hours=$(($ZSH_COMMAND_TIME/3600))
-#         min=$(($ZSH_COMMAND_TIME/60))
-#         sec=$(($ZSH_COMMAND_TIME%60))
-#         if [ "$ZSH_COMMAND_TIME" -le 3 ]; then
-#             timer_show="$fg[green]$ZSH_COMMAND_TIME s."
-#         elif [ "$ZSH_COMMAND_TIME" -gt 5 ] && [ "$ZSH_COMMAND_TIME" -le 10 ]; then
-#             timer_show="$fg[red] $sec s."
-#         else
-#             if [ "$hours" -gt 0 ]; then
-#                 min=$(($min%60))
-#                 timer_show="$fg[red]$hours h. $min min. $sec s."
-#             else
-#                 timer_show="$fg[red]$min min. $sec s."
-#             fi
-#         fi
-#         printf "$fg[${ZSH_COMMAND_TIME_COLOR}]${ZSH_COMMAND_TIME_MSG}\n" "$timer_show"
-#     fi
-# }
 
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export NVM_DIR="$HOME/.nvm"
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 
-PATH="/Users/roy/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/roy/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/roy/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/roy/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/roy/perl5"; export PERL_MM_OPT;
-
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
-PATH=$JAVA_HOME/bin:$PATH:.
-#CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
-export JAVA_HOME
-export PATH
-export CLASSPATH
-
-export M2_HOME=/Library/Maven
-export M2=$M2_HOME/bin
-export PATH=$M2:$PATH
-export hello_shell_scripts=/home/roy/workspace/hello-shell
-export PATH="$hello_shell_scripts:$PATH"
 export PATH=$PATH:/usr/local/kubebuilder/bin
 
-export GOPATH=/Users/roy/go
+export GOPATH=/Users/roywang/go
 export PATH="$GOPATH/bin:$PATH"
-export GO111MODULE=auto
 
 alias ls='lsd'
 alias la='ls -a'
 alias l='ls -l'
 alias lt='ls --tree'
 alias cat=ccat
-alias vim='/usr/local/bin/nvim'
+alias vim='/opt/homebrew/bin/nvim'
+# alias vim='/usr/local/bin/nvim'
 
+alias .='cd ..'
 alias ..='cd ../../'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
-alias cdoam='cd /Users/roy/go/src/github.com/crossplane/oam-kubernetes-runtime'
-alias cdvela='cd /Users/roy/go/src/github.com/oam-dev/kubevela'
-alias cdroy='cd /Users/roy/go/src/roy.hello.me'
+alias cdvela='cd ~/go/src/github.com/oam-dev/kubevela'
+alias cdroy='cd ~/go/src/github.com/captainroy-hy'
+
+function cd () {
+    builtin cd "$1"
+    ls 
+}
+
+alias cp='cp -rv'
+alias mkdir='mkdir -p'
 
 alias kl=kubectl
 alias kg='kubectl get'
@@ -207,21 +179,21 @@ alias kgy='kubectl get -o yaml'
 alias ka='kubectl apply -f'
 alias kd='kubectl delete'
 alias kt='kubectl tree'
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 alias gst='git status'
 alias gdf='git icdiff'
+
 alias rgf='rg --files | rg'
 alias diff='icdiff'
 
 alias ctags="`brew --prefix`/bin/ctags"
-eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git -g "" 2> /dev/null'
 
-# autoload -U compinit && compinit //override comp
+
+# autoload -U compinit && compinit
 # source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/roy/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/roy/Downloads/google-cloud-sdk/path.zsh.inc'; fi
@@ -240,12 +212,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
-function cd () {
-    builtin cd "$1"
-    ls 
-}
-
-alias cp='cp -rv'
 
 [[ -s "/Users/roy/.gvm/scripts/gvm" ]] && source "/Users/roy/.gvm/scripts/gvm"
 
@@ -310,7 +276,11 @@ savelog(){
 function cdk9s() {
     clusterName=(`kubectl config current-context`)
     GREP=(`k9s info | grep Screen`)
-    logPath=`echo ${GREP[3]} | sed -e $'s#\033\[[;0-9]*m##g' | tr -d '[:cntrl:]' | cat`
+    logPath=`echo ${GREP[3]} | sed -e $'s#\033\[[;0-9]*m##g' | tr -d '[:cntrl:]' | bat`
 
     cd $logPath/$clusterName
 }
+
+# add brew to PATH
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/roywang/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
