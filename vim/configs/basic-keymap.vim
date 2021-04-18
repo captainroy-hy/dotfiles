@@ -46,16 +46,16 @@ inoremap <C-l> <C-\><C-N><C-w>l
 nnoremap <leader>t :tabnew \| terminal<CR>
 
 " tab 标签页切换快捷键
-:nn <Leader>1 1gt
-:nn <Leader>2 2gt
-:nn <Leader>3 3gt
-:nn <Leader>4 4gt
-:nn <Leader>5 5gt
-:nn <Leader>6 6gt
-:nn <Leader>7 7gt
-:nn <Leader>8 8gt
-:nn <Leader>9 8gt
-:nn <Leader>0 :tablast<CR>
+:nn <Space>1 1gt
+:nn <Space>2 2gt
+:nn <Space>3 3gt
+:nn <Space>4 4gt
+:nn <Space>5 5gt
+:nn <Space>6 6gt
+:nn <Space>7 7gt
+:nn <Space>8 8gt
+:nn <Space>9 8gt
+:nn <Space>0 :tablast<CR>
 
 " 在tabline中显示tab index
 if exists("+showtabline")
