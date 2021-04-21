@@ -1,5 +1,7 @@
 " coc-nvim
 " 基于 NodeJS 实现，一系列 coc 插件的基础
+"
+" coc-extensions: coc-explorer, coc-yank, coc-json, coc-highlight
 
 let g:coc_config_home=$VIM_CONFIG_DIR . '/coc-nvim'
 
@@ -85,7 +87,8 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
-highlight CocHighlightText guifg=White guibg=blue cterm=bold
+" highlight CocHighlightText guifg=White guibg=blue cterm=bold
+highlight CocHighlightText guifg=black guibg='#50fa7b' cterm=bold
 " highlight CocHighlightText guifg=black guibg=white cterm=bold
 
 " Remap for rename current word
