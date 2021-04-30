@@ -85,7 +85,7 @@
                                 "to": [
                                     {
                                         "key_code": "t",
-                                        "modifiers":[
+                                        "modifiers": [
                                             "left_command"
                                         ]
                                     }
@@ -112,7 +112,7 @@
                                 "to": [
                                     {
                                         "key_code": "w",
-                                        "modifiers":[
+                                        "modifiers": [
                                             "left_command"
                                         ]
                                     }
@@ -139,7 +139,7 @@
                                 "to": [
                                     {
                                         "key_code": "q",
-                                        "modifiers":[
+                                        "modifiers": [
                                             "left_command"
                                         ]
                                     }
@@ -1144,13 +1144,13 @@
                     },
                     {
                         "description": "Custom Clipboard & Selection",
-                        "manipulators":[
+                        "manipulators": [
                             {
-                                "description":"Ctrl + a = Command + a(select all)",
-                                "from":{
-                                    "key_code":"a",
-                                    "modifiers":{
-                                        "mandatory":[
+                                "description": "Ctrl + a = Command + a(select all)",
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "mandatory": [
                                             "left_control"
                                         ]
                                     }
@@ -1166,11 +1166,11 @@
                                 "type": "basic"
                             },
                             {
-                                "description":"Hyper + v = paste",
-                                "from":{
-                                    "key_code":"v",
-                                    "modifiers":{
-                                        "mandatory":[
+                                "description": "Hyper + v = paste",
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
                                             "right_command",
                                             "right_control",
                                             "right_shift",
@@ -1189,11 +1189,11 @@
                                 "type": "basic"
                             },
                             {
-                                "description":"Hyper + c = copy",
-                                "from":{
-                                    "key_code":"c",
-                                    "modifiers":{
-                                        "mandatory":[
+                                "description": "Hyper + c = copy",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": [
                                             "right_command",
                                             "right_control",
                                             "right_shift",
@@ -2134,7 +2134,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "illumination_decrement"
+                            "consumer_key_code": "play_or_pause"
                         }
                     ]
                 },
@@ -2144,7 +2144,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "illumination_increment"
+                            "consumer_key_code": "fast_forward"
                         }
                     ]
                 },
@@ -2164,7 +2164,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "play_or_pause"
+                            "key_code": "f8"
                         }
                     ]
                 },
@@ -2174,7 +2174,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "fastforward"
+                            "key_code": "f9"
                         }
                     ]
                 },
