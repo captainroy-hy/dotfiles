@@ -1,6 +1,6 @@
 # Setup controller-runtime/envtest on Mac M1
 
-The key point is k9s control-plane assets, etcd, kube-apiserver, and kubectl.
+The key point is k8s control-plane assets, etcd, kube-apiserver, and kubectl.
 kubectl is okay since it already released `darwin/arm64` version.
 As for etcd and kube-apiserver, we have to build manually by ourselves.
 
