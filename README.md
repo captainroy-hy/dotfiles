@@ -24,6 +24,9 @@ import into karabiner
 
 `~/.config/nvim/`
 
+copy `./vim/configs/vim-airline/badwolf.vim` to below dir
+`~/.local/share/nvim/plugged/vim-airline-themes/autoload/airline/themes`
+
 #### zsh
 
 `~/.zshrc`

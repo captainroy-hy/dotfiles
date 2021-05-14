@@ -87,9 +87,8 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
-" highlight CocHighlightText guifg=White guibg=blue cterm=bold
-highlight CocHighlightText guifg=black guibg='#50fa7b' cterm=bold
-" highlight CocHighlightText guifg=black guibg=white cterm=bold
+" highlight CocHighlightText guifg=black guibg='#50fa7b' cterm=bold
+highlight CocHighlightText guifg=white guibg='#61afef' cterm=bold
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
