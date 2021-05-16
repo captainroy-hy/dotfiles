@@ -100,3 +100,4 @@ source $VIM_CONFIG_DIR/plug-vim-bookmarks.vim
 source $VIM_CONFIG_DIR/plug-vim-floaterm.vim
 source $VIM_CONFIG_DIR/plug-vim-go.vim
 source $VIM_CONFIG_DIR/plug-vim-delve.vim
+source $VIM_CONFIG_DIR/plug-vim-projectroot.vim

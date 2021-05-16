@@ -50,9 +50,11 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " nmap <silent> <C-n> <Plug>(coc-diagnostic-next)
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
 nmap <silent> ]d <Plug>(coc-diagnostic-next)
+" key mappings for quickfix window
 nnoremap <silent><C-n> :cn<CR>
 nnoremap <silent><C-m> :cp<CR>
 nnoremap <silent><C-x> :ccl<CR>
+nnoremap <space><C-x> :copen<CR>
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
