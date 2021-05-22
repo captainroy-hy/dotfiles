@@ -35,6 +35,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'pangloss/vim-javascript'
 Plug 'jiangmiao/auto-pairs'
+Plug 'romainl/vim-qf'
 "Plug 'chiel92/vim-autoformat'
 "
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -101,3 +102,4 @@ source $VIM_CONFIG_DIR/plug-vim-floaterm.vim
 source $VIM_CONFIG_DIR/plug-vim-go.vim
 source $VIM_CONFIG_DIR/plug-vim-delve.vim
 source $VIM_CONFIG_DIR/plug-vim-projectroot.vim
+source $VIM_CONFIG_DIR/plug-vim-qf.vim
